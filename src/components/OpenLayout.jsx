@@ -10,7 +10,7 @@ export default function OpenLayout() {
     <>
       {showPopup && (
         <div className="popup-overlay" onClick={() => setShowPopup(false)}>
-          <div className="wrapperLay">
+          <div className="wrapperLay" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setShowPopup(false)}>
               ×
             </button>
