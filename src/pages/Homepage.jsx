@@ -1,7 +1,11 @@
 export default function Homepage() {
   return (
     <>
-      <h1>Homapage</h1>
+      <div className="wrapperHome vh-100">
+        <div className="container">
+          <h1>Homepage</h1>
+        </div>
+      </div>
     </>
   );
 }
