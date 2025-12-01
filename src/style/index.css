@@ -5,3 +5,7 @@
   backdrop-filter: blur(50%);
   background-color: gray;
 }
+
+body {
+  background-color: #f3c516;
+}

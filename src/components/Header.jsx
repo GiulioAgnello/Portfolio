@@ -3,9 +3,6 @@ export default function Header() {
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
           <button
             className="navbar-toggler"
             type="button"
