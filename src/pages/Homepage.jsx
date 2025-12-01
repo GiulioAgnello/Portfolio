@@ -1,5 +1,6 @@
 import RotatingText from "../components/RotatingText.jsx";
-
+import CardsProjects from "../components/CardsProjects.jsx";
+import projects from "../../db/projects.js";
 export default function Homepage() {
   return (
     <>
@@ -52,12 +53,11 @@ export default function Homepage() {
             <div className="col-12 d-flex justify-content-center my-5 fw-bold ">
               <h2>My Projects</h2>
             </div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
-            <div className="col-4"></div>
+            <div className="row g-4">
+              {projects.map((project) => (
+                <CardsProjects key={project.id} projects={project} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

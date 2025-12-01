@@ -1,58 +1,55 @@
-import { img } from "motion/react-client";
-
-export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Dream Experience",
-      description:
-        "Piattaforma per il booking di esperienze uniche, funzionalità di comparatore e acquisto",
-      link: "https://progetto-finale-spec-frontend-front-theta.vercel.app/",
-      img: "/dream-experience.png",
-      Tech: ["React", "Node.js", "Express", "CSS3", "Bootstrap", "Context API"],
-      code: {
-        frontend:
-          "https://github.com/GiulioAgnello/progetto-finale-spec-frontend-front",
-        backend: "",
-      },
+const projects = [
+  {
+    id: 1,
+    title: "Dream Experience",
+    description:
+      "Piattaforma per il booking di esperienze uniche, funzionalità di comparatore e acquisto",
+    link: "https://progetto-finale-spec-frontend-front-theta.vercel.app/",
+    img: "public/projectPhoto/dream_experience.jpg",
+    Tech: ["React", "Node.js", "Express", "CSS3", "Bootstrap", "Context API"],
+    code: {
+      frontend:
+        "https://github.com/GiulioAgnello/progetto-finale-spec-frontend-front",
+      backend: "",
     },
-    {
-      id: 2,
-      title: "BoolStop",
-      description:
-        "Gaming e-commerce platform sviluppata in 2 settimane. Progetto full-stack che unisce database design, server Express.js e frontend React.js con focus su UX/UI.",
+  },
+  {
+    id: 2,
+    title: "BoolStop",
+    description:
+      "Gaming e-commerce platform sviluppata in 2 settimane. Progetto full-stack che unisce database design, server Express.js e frontend React.js con focus su UX/UI.",
 
-      img: "/boolstop.png",
-      Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
-      code: {
-        frontend: "https://github.com/GiulioAgnello/BoolStopFrontEnd",
-        backend: "https://github.com/GiulioAgnello/boolstop_express",
-      },
+    img: "public/projectPhoto/boolstop.jpeg",
+    Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
+    code: {
+      frontend: "https://github.com/GiulioAgnello/BoolStopFrontEnd",
+      backend: "https://github.com/GiulioAgnello/boolstop_express",
     },
-    {
-      id: 3,
-      title: "Boolroad",
-      description:
-        "piattaforma per organizzare viaggi in gruppo, con funzionalità di creazione gruppi di viaggio, gestione partecipanti.",
+  },
+  {
+    id: 3,
+    title: "Boolroad",
+    description:
+      "piattaforma per organizzare viaggi in gruppo, con funzionalità di creazione gruppi di viaggio, gestione partecipanti.",
 
-      img: "/boolroad.png",
-      Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
-      code: {
-        frontend: "https://github.com/GiulioAgnello/project_boolroad_T6",
-      },
+    img: "/boolroad.png",
+    Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
+    code: {
+      frontend: "https://github.com/GiulioAgnello/project_boolroad_T6",
     },
-    {
-      id: 4,
-      title: "Boolflix",
-      description:
-        "piattaforma con lista di film e serie TV, con funzionalità di ricerca, filtri per genere e dettagli dei contenuti.",
+  },
+  {
+    id: 4,
+    title: "Boolflix",
+    description:
+      "piattaforma con lista di film e serie TV, con funzionalità di ricerca, filtri per genere e dettagli dei contenuti.",
 
-      img: "/boolflix.png",
-      Tech: ["React.js", "CSS3", "Bootstrap", "REST API"],
-      code: {
-        frontend: "https://github.com/GiulioAgnello/react-boolflix",
-      },
+    img: "/boolflix.png",
+    Tech: ["React.js", "CSS3", "Bootstrap", "REST API"],
+    code: {
+      frontend: "https://github.com/GiulioAgnello/react-boolflix",
     },
-  ];
-  return projects;
-}
+  },
+];
+
+export default projects;

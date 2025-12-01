@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import LiquidEther from "../components/LiquidEther";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function DefaultLayout() {
   return (
@@ -10,7 +10,7 @@ export default function DefaultLayout() {
         style={{
           width: "100%",
           height: "100%",
-          position: "absolute",
+          position: "fixed",
           top: 0,
           left: 0,
           zIndex: -1,
@@ -38,7 +38,7 @@ export default function DefaultLayout() {
       <main>
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
