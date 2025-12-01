@@ -5,14 +5,14 @@ export default function Homepage() {
     <>
       <div className="wrapperHome vh-100">
         <div className="container ">
-          <div className="row py-5 d-flex justify-content-between align-items-center">
-            <div className="col-3">
+          <div className="row py-5 d-flex justify-content-between align-items-center g-5 mt-5">
+            <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
               <div className="fotoHome"></div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-md-8 mb-4 d-flex justify-content-center">
               <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
                 <div className="d-flex gap-2 justify-content-center align-items-center fs-1 sm:fs-4 md:fs-5">
-                  <p className="m-0 fw-bold text-light">Giulio</p>
+                  <p className="m-0 fw-bold text-dark">Giulio</p>
                   <RotatingText
                     texts={[
                       "Agnello",
@@ -46,6 +46,18 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="col-12 d-flex justify-content-center my-5 fw-bold ">
+              <h2>My Projects</h2>
+            </div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
+            <div className="col-4"></div>
           </div>
         </div>
       </div>
