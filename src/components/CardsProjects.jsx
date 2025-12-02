@@ -7,8 +7,8 @@ export default function CardsProjects({ projects }) {
   const { img, title, description, Tech, code, link } = projects;
   return (
     <div className="col-12 col-md-6 d-flex justify-content-center">
-      <div className="card">
-        <img src={img} className="card-img-top h-100" alt={title} />
+      <div className="cardProject card">
+        <img src={img} className="cardImg card-img-top " alt={title} />
         <div className="card-body">
           <div className="d-flex gap-2">
             <h5 className="card-title">{title} </h5>
@@ -23,14 +23,16 @@ export default function CardsProjects({ projects }) {
               <li key={index}>{tech}</li>
             ))}
           </ul>
-          <Link to={code.frontend} className="btn btn-primary">
-            <FontAwesomeIcon icon={faGithub} /> Git Frontend
-          </Link>
-          {code.backend && (
-            <Link to={code.backend} className="btn btn-primary">
-              <FontAwesomeIcon icon={faGithub} /> Git Backend
+          <div className="d-flex justify-content-center">
+            <Link to={code.frontend} className="btn ">
+              <FontAwesomeIcon icon={faGithub} /> Git Frontend
             </Link>
-          )}
+            {code.backend && (
+              <Link to={code.backend} className="btn ">
+                Backend
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
