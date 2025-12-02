@@ -64,3 +64,19 @@
   font-weight: bold;
   transform: scale(1.1);
 }
+
+/* card */
+
+.listTech {
+  list-style-type: none;
+  padding: 0;
+}
+.listTech li {
+  display: inline-block;
+  background-color: #8a2be2;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}

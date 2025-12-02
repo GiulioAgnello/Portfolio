@@ -32,7 +32,7 @@ const projects = [
     description:
       "piattaforma per organizzare viaggi in gruppo, con funzionalità di creazione gruppi di viaggio, gestione partecipanti.",
 
-    img: "/boolroad.png",
+    img: "public/projectPhoto/boolroad.png",
     Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
     code: {
       frontend: "https://github.com/GiulioAgnello/project_boolroad_T6",
@@ -44,7 +44,7 @@ const projects = [
     description:
       "piattaforma con lista di film e serie TV, con funzionalità di ricerca, filtri per genere e dettagli dei contenuti.",
 
-    img: "/boolflix.png",
+    img: "public/projectPhoto/boolflix.png",
     Tech: ["React.js", "CSS3", "Bootstrap", "REST API"],
     code: {
       frontend: "https://github.com/GiulioAgnello/react-boolflix",
