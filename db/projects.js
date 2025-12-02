@@ -5,7 +5,7 @@ const projects = [
     description:
       "Piattaforma per il booking di esperienze uniche, funzionalità di comparatore e acquisto",
     link: "https://progetto-finale-spec-frontend-front-theta.vercel.app/",
-    img: "public/projectPhoto/dream_experience.jpg",
+    img: "./public/dream_experience.jpg",
     Tech: ["React", "Node.js", "Express", "CSS3", "Bootstrap", "Context API"],
     code: {
       frontend:
@@ -19,7 +19,7 @@ const projects = [
     description:
       "Gaming e-commerce platform sviluppata in 2 settimane. Progetto full-stack che unisce database design, server Express.js e frontend React.js con focus su UX/UI.",
 
-    img: "public/projectPhoto/boolstop.jpeg",
+    img: "./public/boolstop.jpeg",
     Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
     code: {
       frontend: "https://github.com/GiulioAgnello/BoolStopFrontEnd",
@@ -32,7 +32,7 @@ const projects = [
     description:
       "piattaforma per organizzare viaggi in gruppo, con funzionalità di creazione gruppi di viaggio, gestione partecipanti.",
 
-    img: "public/projectPhoto/boolroad.png",
+    img: "./public/boolroad.png",
     Tech: ["React.js", "Express.js", "MySQL", "Bootstrap", "REST API"],
     code: {
       frontend: "https://github.com/GiulioAgnello/project_boolroad_T6",
@@ -44,7 +44,7 @@ const projects = [
     description:
       "piattaforma con lista di film e serie TV, con funzionalità di ricerca, filtri per genere e dettagli dei contenuti.",
 
-    img: "public/projectPhoto/boolflix.png",
+    img: "./public/boolflix.png",
     Tech: ["React.js", "CSS3", "Bootstrap", "REST API"],
     code: {
       frontend: "https://github.com/GiulioAgnello/react-boolflix",
