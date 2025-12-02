@@ -50,9 +50,12 @@ export default function Homepage() {
   ];
   return (
     <>
-      <div className="wrapperHome vh-100">
+      <div className="wrapperHome vh-100" id="about">
         <div className="container ">
-          <div className="row pb-5 d-flex justify-content-between align-items-center g-5 mt-5">
+          <div
+            id="home"
+            className="row pb-5 d-flex justify-content-between align-items-center g-5 mt-5"
+          >
             <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
               <div className="fotoHome"></div>
             </div>
@@ -95,7 +98,7 @@ export default function Homepage() {
             </div>
           </div>
           <hr />
-          <div className="row my-5">
+          <div className="row my-5" id="projects">
             <div className="col-12 d-flex justify-content-center my-5 fw-bold ">
               <h2>My Projects</h2>
             </div>
@@ -106,7 +109,7 @@ export default function Homepage() {
             </div>
           </div>
           <hr />
-          <div className="row my-5">
+          <div className="row my-5" id="story">
             <h2 className="text-center mb-5">My Story</h2>
 
             <div className="row mb-5">

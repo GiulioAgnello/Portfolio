@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Homepage from "./pages/Homepage";
+import Contatti from "./pages/Contatti";
 import DefaultLayout from "./layout/DefaultLayout";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Homepage />} />
+          <Route path="/contatti" element={<Contatti />} />
         </Route>
       </Routes>
     </BrowserRouter>

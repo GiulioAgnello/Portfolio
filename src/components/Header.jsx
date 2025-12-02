@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-sticky w-100 top-0 mt-5 z-3">
+      <nav className="navbar navbar-expand-lg position-fixed w-100 top-0 mt-1 z-3">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -21,17 +26,23 @@ export default function Header() {
             id="navbarNavAltMarkup"
           >
             <div className="navBar d-flex justify-content-center align-items-center px-3 py-2">
-              <div className=" navbar-nav">
-                <NavLink className="nav-link active" aria-current="page" to="/">
+              <div className="navbar-nav">
+                <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
-                <NavLink className="nav-link" to="#">
+                <button
+                  className="nav-link btn btn-link p-1"
+                  onClick={() => handleScroll("projects")}
+                >
                   Projects
-                </NavLink>
-                <NavLink className="nav-link" to="#">
+                </button>
+                <button
+                  className="nav-link btn btn-link p-1"
+                  onClick={() => handleScroll("story")}
+                >
                   MyStory
-                </NavLink>
-                <NavLink className="nav-link" to="#">
+                </button>
+                <NavLink className="nav-link" to="/contatti">
                   Contatti
                 </NavLink>
               </div>
