@@ -57,13 +57,7 @@ export default function Homepage() {
             className="row pb-5 d-flex justify-content-between align-items-center g-5 mt-5"
           >
             <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
-              <div className="fotoHome">
-                <img
-                  src="public\GiulioAgnello.png"
-                  alt="foto_mia"
-                  style={{ width: "100%", clipPath: "circle(50% at 50% 50%)" }}
-                />
-              </div>
+              <div className="fotoHome"></div>
             </div>
             <div className="col-12 col-md-8 mb-4 d-flex justify-content-center">
               <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
