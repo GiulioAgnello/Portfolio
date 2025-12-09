@@ -2,6 +2,7 @@ import RotatingText from "../components/RotatingText.jsx";
 import CardsProjects from "../components/CardsProjects.jsx";
 import projects from "../../db/projects.js";
 import LogoLoop from "../components/LogoLoop";
+import Weather from "../components/Weather.jsx";
 import {
   SiReact,
   SiNextdotjs,
@@ -12,8 +13,31 @@ import {
   SiBootstrap,
   SiVite,
 } from "react-icons/si";
+import { useState, useEffect } from "react";
 
 export default function Homepage() {
+  const [coords, setCoords] = useState({
+    latitude: 40.3548,
+    longitude: 18.1724,
+  });
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setCoords({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+        },
+        (error) => {
+          console.warn("Geolocation non disponibile:", error);
+          // Mantiene le coordinate di default
+        }
+      );
+    }
+  }, []);
+
   const techLogos = [
     { node: <SiReact />, title: "React", href: "https://react.dev" },
     { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
@@ -98,9 +122,16 @@ export default function Homepage() {
             </div>
           </div>
           <hr />
+          <h2 className="text-center">
+            Weather (Uso API Open-Meteo e Nominatim)
+          </h2>
+          <div className="d-flex justify-content-center my-4">
+            <Weather latitude={coords.latitude} longitude={coords.longitude} />
+          </div>
+          <hr />
           <div className="row my-5" id="projects">
             <div className="col-12 d-flex justify-content-center my-5 fw-bold ">
-              <h2>My Projects</h2>
+              <h2>My Projects (link per codice su GitHub)</h2>
             </div>
             <div className="row g-4">
               {projects.map((project) => (
