@@ -51,7 +51,7 @@ export default function Contatti() {
     <div className="container py-5" id="contact">
       <div className="row text-center m-5">
         <h1 className="fw-bold">I miei contatti</h1>
-        <p className="text-muted">
+        <p>
           Sono disponibile per collaborazioni, freelance e opportunità
           full-time. Scrivimi o raggiungimi sui social.
         </p>
@@ -73,8 +73,8 @@ export default function Contatti() {
                   {c.icon}
                 </div>
                 <div className="flex-grow-1">
-                  <h5 className="mb-1 text-dark">{c.label}</h5>
-                  <span className="text-muted">{c.value}</span>
+                  <h5 className="mb-1 ">{c.label}</h5>
+                  <span>{c.value}</span>
                 </div>
               </div>
             </a>
@@ -84,7 +84,7 @@ export default function Contatti() {
 
       <div className="row mt-5">
         <div className="col-12 text-center">
-          <p className="mb-2 text-muted">Tecnologie e interessi</p>
+          <p className="mb-2 ">Tecnologie e interessi</p>
           <ul className="listTech d-inline-block">
             <li>React</li>
             <li>JavaScript</li>
