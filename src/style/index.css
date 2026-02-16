@@ -4,8 +4,36 @@ html {
   scroll-behavior: smooth;
 }
 
+html[data-theme="dark"] {
+  --primary-bg: #060010;
+  --primary-text: #ffffff;
+  --secondary-text: rgba(255, 255, 255, 0.8);
+  --navbar-bg: #ffffff;
+  --navbar-text: #000000;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(138, 43, 226, 0.3);
+}
+
+html[data-theme="light"] {
+  --primary-bg: #f5f5f5;
+  --primary-text: #000000;
+  --secondary-text: rgba(0, 0, 0, 0.7);
+  --navbar-bg: #ffffff;
+  --navbar-text: #000000;
+  --card-bg: rgba(138, 43, 226, 0.05);
+  --border-color: rgba(138, 43, 226, 0.5);
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
 .body {
-  background-color: #060010;
+  background-color: var(--primary-bg);
 }
 
 .wrapperLay {
@@ -68,7 +96,7 @@ html {
 /* NAVBAR */
 
 .navBar {
-  background-color: rgba(255, 255, 255);
+  background-color: var(--navbar-bg);
   padding: 8px 50px;
   width: 100%;
   position: sticky;
@@ -76,19 +104,42 @@ html {
   z-index: 1000;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .navBar .nav-link {
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
+  color: var(--navbar-text);
+  transition:
+    color 0.3s ease-in-out,
+    border-bottom-color 0.3s ease-in-out;
 }
 
 .navBar .nav-link:hover {
   color: #8a2be2;
   border-bottom-color: #000000;
-  transition:
-    color 0.8s ease-in-out,
-    border-bottom-color 0.3s ease-in-out;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  color: var(--navbar-text);
+  padding: 0;
+  border: none;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  transform: scale(1.1);
 }
 
 /* card */
@@ -108,7 +159,7 @@ html {
 }
 
 .cardProject {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--card-bg);
   border: none;
   border-radius: 15px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -355,7 +406,7 @@ html {
 
 .weatherDescription {
   font-size: 0.9rem;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-text);
   text-transform: capitalize;
   margin-bottom: 0;
 }
@@ -378,14 +429,14 @@ html {
 .weatherDetail label {
   display: inline;
   font-size: 0.75rem;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-text);
   margin-right: 5px;
 }
 
 .weatherDetail .value {
   font-size: 0.95rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: var(--primary-text);
 }
 
 @media (max-width: 768px) {

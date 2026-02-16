@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Header() {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
   const handleScroll = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -46,6 +50,13 @@ export default function Header() {
                   Contatti
                 </NavLink>
               </div>
+              <button
+                className="theme-toggle-btn"
+                onClick={toggleTheme}
+                title={isDarkMode ? "Attiva Light Mode" : "Attiva Dark Mode"}
+              >
+                {isDarkMode ? "☀️" : "🌙"}
+              </button>
             </div>
           </div>
         </div>
