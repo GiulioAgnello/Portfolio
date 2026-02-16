@@ -33,7 +33,7 @@ export default function Homepage() {
         (error) => {
           console.warn("Geolocation non disponibile:", error);
           // Mantiene le coordinate di default
-        }
+        },
       );
     }
   }, []);
@@ -86,7 +86,7 @@ export default function Homepage() {
             <div className="col-12 col-md-8 mb-4 d-flex justify-content-center">
               <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
                 <div className="d-flex gap-2 justify-content-center align-items-center fs-1 sm:fs-4 md:fs-5">
-                  <p className="m-0 fw-bold text-dark">Giulio</p>
+                  <p className="m-0 fw-bold nameRotation">Giulio</p>
                   <RotatingText
                     texts={[
                       "Agnello",

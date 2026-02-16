@@ -8,7 +8,7 @@ html[data-theme="dark"] {
   --primary-bg: #060010;
   --primary-text: #ffffff;
   --secondary-text: rgba(255, 255, 255, 0.8);
-  --navbar-bg: #ffffff;
+  --navbar-bg: #555555;
   --navbar-text: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.1);
   --border-color: rgba(138, 43, 226, 0.3);
@@ -18,7 +18,7 @@ html[data-theme="light"] {
   --primary-bg: #f5f5f5;
   --primary-text: #000000;
   --secondary-text: rgba(0, 0, 0, 0.7);
-  --navbar-bg: #ffffff;
+  --navbar-bg: #5a5a5a;
   --navbar-text: #000000;
   --card-bg: rgba(138, 43, 226, 0.05);
   --border-color: rgba(138, 43, 226, 0.5);
@@ -117,8 +117,9 @@ body {
 }
 
 .navBar .nav-link:hover {
-  color: #8a2be2;
+  color: #000000;
   border-bottom-color: #000000;
+  text-shadow: #f5f5f5 0px 0px 5px;
 }
 
 .theme-toggle-btn {
@@ -174,6 +175,14 @@ body {
 }
 
 /* LogoLoop  */
+
+.nameRotation {
+  background: linear-gradient(90deg, #8a2be2, #00ffff, #ff69b4, #8a2be2);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .logoloop {
   position: relative;
