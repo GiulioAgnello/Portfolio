@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="navBar  navbar-expand-lg">
+      <nav className="navBar navbar  navbar-expand-lg">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -29,7 +29,7 @@ export default function Header() {
             className="collapse navbar-collapse align-items-center justify-content-center"
             id="navbarNavAltMarkup"
           >
-            <div className=" ">
+            <div className=" d-flex align-items-center justify-content-between gap-4">
               <div className="navbar-nav gap-4">
                 <NavLink className="nav-link" to="/">
                   Home
