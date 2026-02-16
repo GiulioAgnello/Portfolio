@@ -9,7 +9,7 @@ html[data-theme="dark"] {
   --primary-text: #ffffff;
   --secondary-text: rgba(255, 255, 255, 0.8);
   --navbar-bg: #ffffff;
-  --navbar-text: #000000;
+  --navbar-text: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.1);
   --border-color: rgba(138, 43, 226, 0.3);
 }
@@ -41,7 +41,7 @@ body {
   width: 100vh;
   z-index: 10;
   backdrop-filter: blur(50%);
-  background-color: gray;
+  background-color: rgb(121, 121, 121);
 }
 
 /* LIQUIDETHER  */
