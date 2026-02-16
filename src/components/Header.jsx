@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-fixed w-100 top-0 mt-1 z-3">
+      <nav className="navBar  navbar-expand-lg">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -25,19 +25,19 @@ export default function Header() {
             className="collapse navbar-collapse align-items-center justify-content-center"
             id="navbarNavAltMarkup"
           >
-            <div className="navBar d-flex justify-content-center align-items-center px-3 py-2">
-              <div className="navbar-nav">
+            <div className=" ">
+              <div className="navbar-nav gap-4">
                 <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
                 <button
-                  className="nav-link btn btn-link p-1"
+                  className="nav-link "
                   onClick={() => handleScroll("projects")}
                 >
                   Projects
                 </button>
                 <button
-                  className="nav-link btn btn-link p-1"
+                  className="nav-link "
                   onClick={() => handleScroll("story")}
                 >
                   MyStory

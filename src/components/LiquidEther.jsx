@@ -167,22 +167,22 @@ export default function LiquidEther({
         if (this.listenerTarget) {
           this.listenerTarget.removeEventListener(
             "mousemove",
-            this._onMouseMove
+            this._onMouseMove,
           );
           this.listenerTarget.removeEventListener(
             "touchstart",
-            this._onTouchStart
+            this._onTouchStart,
           );
           this.listenerTarget.removeEventListener(
             "touchmove",
-            this._onTouchMove
+            this._onTouchMove,
           );
           this.listenerTarget.removeEventListener("touchend", this._onTouchEnd);
         }
         if (this.docTarget) {
           this.docTarget.removeEventListener(
             "mouseleave",
-            this._onDocumentLeave
+            this._onDocumentLeave,
           );
         }
         this.listenerTarget = null;
@@ -308,7 +308,7 @@ export default function LiquidEther({
         const r = Math.random;
         this.target.set(
           (r() * 2 - 1) * (1 - this.margin),
-          (r() * 2 - 1) * (1 - this.margin)
+          (r() * 2 - 1) * (1 - this.margin),
         );
       }
       forceStop() {
@@ -349,7 +349,7 @@ export default function LiquidEther({
         if (this.rampDurationMs > 0) {
           const t = Math.min(
             1,
-            (now - this.activationTime) / this.rampDurationMs
+            (now - this.activationTime) / this.rampDurationMs,
           );
           ramp = t * t * (3 - 2 * t);
         }
@@ -590,7 +590,7 @@ export default function LiquidEther({
         ]);
         boundaryG.setAttribute(
           "position",
-          new THREE.BufferAttribute(vertices_boundary, 3)
+          new THREE.BufferAttribute(vertices_boundary, 3),
         );
         const boundaryM = new THREE.RawShaderMaterial({
           vertexShader: line_vert,
@@ -628,7 +628,7 @@ export default function LiquidEther({
             scale: {
               value: new THREE.Vector2(
                 simProps.cursor_size,
-                simProps.cursor_size
+                simProps.cursor_size,
               ),
             },
           },
@@ -643,11 +643,11 @@ export default function LiquidEther({
         const cursorSizeY = props.cursor_size * props.cellScale.y;
         const centerX = Math.min(
           Math.max(Mouse.coords.x, -1 + cursorSizeX + props.cellScale.x * 2),
-          1 - cursorSizeX - props.cellScale.x * 2
+          1 - cursorSizeX - props.cellScale.x * 2,
         );
         const centerY = Math.min(
           Math.max(Mouse.coords.y, -1 + cursorSizeY + props.cellScale.y * 2),
-          1 - cursorSizeY - props.cellScale.y * 2
+          1 - cursorSizeY - props.cellScale.y * 2,
         );
         const uniforms = this.mouse.material.uniforms;
         uniforms.force.value.set(forceX, forceY);
@@ -836,7 +836,7 @@ export default function LiquidEther({
           this.fbos[key] = new THREE.WebGLRenderTarget(
             this.fboSize.x,
             this.fboSize.y,
-            opts
+            opts,
           );
         }
       }
@@ -888,11 +888,11 @@ export default function LiquidEther({
       calcSize() {
         const width = Math.max(
           1,
-          Math.round(this.options.resolution * Common.width)
+          Math.round(this.options.resolution * Common.width),
         );
         const height = Math.max(
           1,
-          Math.round(this.options.resolution * Common.height)
+          Math.round(this.options.resolution * Common.height),
         );
         const px_x = 1.0 / width;
         const px_y = 1.0 / height;
@@ -958,7 +958,7 @@ export default function LiquidEther({
               palette: { value: paletteTex },
               bgColor: { value: bgVec4 },
             },
-          })
+          }),
         );
         this.scene.add(this.output);
       }
@@ -1112,7 +1112,7 @@ export default function LiquidEther({
           webglRef.current.pause();
         }
       },
-      { threshold: [0, 0.01, 0.1] }
+      { threshold: [0, 0.01, 0.1] },
     );
     io.observe(container);
     intersectionObserverRef.current = io;
