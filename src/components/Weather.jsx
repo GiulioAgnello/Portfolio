@@ -9,13 +9,13 @@ export default function Weather({ latitude, longitude }) {
       try {
         // Fetch dati meteo
         const weatherResponse = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,precipitation,rain,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto`
+          `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,precipitation,rain,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto`,
         );
         const weatherDataApi = await weatherResponse.json();
 
         // Fetch città con Reverse Geocoding
         const geoResponse = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`,
         );
         const geoData = await geoResponse.json();
         const city =
@@ -60,7 +60,7 @@ export default function Weather({ latitude, longitude }) {
         <div
           style={{
             fontSize: "0.8rem",
-            color: "rgba(0, 0, 0, 1)",
+            color: "var(--secondary-text)",
           }}
         >
           📍 {weatherData.city}

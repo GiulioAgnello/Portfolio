@@ -167,6 +167,18 @@ body {
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
+  color: var(--primary-text);
+}
+.linkSocial {
+  color: var(--primary-text);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin: 0 5px;
+}
+.linkSocial:hover {
+  color: var(--primary-text);
+  text-decoration: underline;
+  text-shadow: #f5f5f5 0px 0px 5px;
 }
 
 .cardImg {

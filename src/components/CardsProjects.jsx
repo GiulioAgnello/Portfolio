@@ -23,12 +23,12 @@ export default function CardsProjects({ projects }) {
               <li key={index}>{tech}</li>
             ))}
           </ul>
-          <div className="d-flex justify-content-center">
-            <Link to={code.frontend} className="btn ">
+          <div className=" d-flex justify-content-center ">
+            <Link to={code.frontend} className="linkSocial">
               <FontAwesomeIcon icon={faGithub} /> Git Frontend
             </Link>
             {code.backend && (
-              <Link to={code.backend} className="btn ">
+              <Link to={code.backend} className="linkSocial ">
                 Backend
               </Link>
             )}

@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { FiMoon } from "react-icons/fi";
 import { IoSunny } from "react-icons/io5";
-s;
 
 export default function Header() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
