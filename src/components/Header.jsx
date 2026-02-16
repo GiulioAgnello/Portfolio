@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { FiMoon } from "react-icons/fi";
+import { IoSunny } from "react-icons/io5";
+s;
 
 export default function Header() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -55,7 +58,11 @@ export default function Header() {
                 onClick={toggleTheme}
                 title={isDarkMode ? "Attiva Light Mode" : "Attiva Dark Mode"}
               >
-                {isDarkMode ? "☀️" : "🌙"}
+                {isDarkMode ? (
+                  <IoSunny className="text-light" />
+                ) : (
+                  <FiMoon className="text-dark" />
+                )}
               </button>
             </div>
           </div>
